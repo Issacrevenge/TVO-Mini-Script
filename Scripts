@@ -1,0 +1,16 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("TVO Mini Script", "Synapse")
+local Tab = Window:NewTab("Spam")
+local Section = Tab:NewSection("Tunning Fork")
+Section:NewButton("Spam", "ButtonInfo", function()
+    print("Clicked")
+local args = {
+    [1] = "Tuning Pain",
+    [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("Tuning Fork")
+}
+
+game:GetService("ReplicatedStorage").Events.SystemEvents.Tools:FireServer(unpack(args))
+
+
+
+end)
